@@ -38,5 +38,37 @@ function playRound(playerChoice, computerChoice) {
     }
 }
 
+// The Game start (BO5)
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        if (playerScore === 3 || computerScore === 3) {
+            console.log("")
+        }
+
+        const playerSelection = getPlayerChoice();  
+        const computerSelection = getComputerChoice();
+
+        console.clear(); // Clear console before show the next round result
+
+        console.log("Computer choice: " + computerSelection);
+        console.log("Player choice: " + playerSelection);
+
+        playRound(playerSelection, computerSelection)
+    }
+    // Decide who have won this BO5 game of Rock Paper Scissors
+    console.clear();
+    if (playerScore > computerScore) {
+        console.log("You have won this BO5 game of Rock Paper Scissors!")
+    }
+    else if (playerScore === computerScore) {
+        console.log("This BO5 game of Rock Paper Scissors has ended in a tie!")
+    }
+    else {
+        console.log("We can not win every time... you lost!")
+    }
+}
+
 let computerScore = 0;
 let playerScore = 0;
+
+playGame();
