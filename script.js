@@ -19,3 +19,24 @@ function getPlayerChoice() {
         case 3: return "Scissors";
     }
 }
+
+// Decide who win or lost the round, or if there was a tie
+function playRound(playerChoice, computerChoice) {
+    if (playerChoice === "Rock" && computerChoice === "Scissors" ||
+        playerChoice === "Paper" && computerChoice === "Rock" ||
+        playerChoice === "Scissors" && computerChoice === "Paper"
+    ) {
+        playerScore++;
+        console.log(`You win! ${playerChoice} beats ${computerChoice}`)
+    }
+    else if (playerChoice === computerChoice) {
+        console.log("It's a tie!")
+    }
+    else {
+        computerScore++;
+        console.log(`You lost! ${computerChoice} beats ${playerChoice}`)
+    }
+}
+
+let computerScore = 0;
+let playerScore = 0;
