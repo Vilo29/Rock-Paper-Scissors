@@ -9,3 +9,13 @@ function getComputerChoice() {
         case 3: return "Scissors";
     }
 }
+
+// Get a choice from the player
+function getPlayerChoice() {
+    let selection = Number(prompt("Choose!\n\n1. Rock\n2. Paper\n3. Scissors"))
+    switch(selection) {
+        case 1: return "Rock";
+        case 2: return "Paper";
+        case 3: return "Scissors";
+    }
+}
