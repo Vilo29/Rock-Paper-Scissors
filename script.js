@@ -44,7 +44,7 @@ function playRound(playerChoice, computerChoice) {
 // The Game start (BO5)
 function playGame() {
     for (let i = 0; i < 5; i++) {
-        if (playerScore === 3 || computerScore === 3) {
+        if (playerScore === 3 || computerScore === 3) { // Stop the game when someone has already won 3 rounds
             break;
         }
 
